@@ -1,0 +1,78 @@
+@import '@/styles/utils/mixins';
+
+.newsCards {
+  width: 100%;
+  margin-top: 3.2rem;
+  display: grid;
+  gap: 1.6rem;
+
+  @include onLaptop {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.newsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.newsCardImageWrapper {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.newsCardImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.isMob {
+  @include onTablet {
+    display: none;
+  }
+}
+
+.isTab {
+  display: none;
+
+  @include onTablet {
+    display: inline-block;
+  }
+
+  @include onLaptop {
+    display: none;
+  }
+}
+
+.isLap {
+  display: none;
+
+  @include onLaptop {
+    display: inline-block;
+  }
+
+  @include onMediumDesktop {
+    display: none;
+  }
+}
+
+.isDesk {
+  display: none;
+  @include onMediumDesktop {
+    display: inline-block;
+  }
+}
+
+.newsCardMain {
+  max-width: 608px;
+}
+
+.newsCardHeading {
+  margin-bottom: .8rem;
+  font-family: var(--font-gilroy);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 150%;
+}

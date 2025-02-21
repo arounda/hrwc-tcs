@@ -1,0 +1,144 @@
+@import '@/styles/utils/mixins';
+
+.headerDesktopNav {
+  display: none;
+  gap: 24px;
+
+  @include onMediumDesktop {
+    display: flex;
+  }
+}
+
+.headerNavListItem {
+  position: relative;
+}
+
+.headerNavListItem svg {
+  transition: all 300ms ease;
+}
+
+.headerNavListItem:hover svg {
+  transform: rotate(180deg);
+}
+
+.headerNavListItem .solutionsDropdown {
+  display: none;
+  transition: all 300ms;
+}
+
+.headerNavListItem:hover .solutionsDropdown {
+  display: block;
+}
+
+.headerNavLink.withChevron {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.headerNavLink:hover {
+  color: var(--primary);
+
+  @include onMediumDesktop {
+    color: var(--white);
+  }
+}
+
+.headerNavListItem:hover span,
+.headerNavListItem:hover path {
+  color: var(--light-blue-v2);
+  stroke: var(--light-blue-v2);
+}
+
+.solutionsDropdown {
+  padding-top: 1.6rem;
+  min-width: 250px;
+  position: absolute;
+  left: -24px;
+}
+
+.solutionsDropdownList {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 4px 4px 40px 0px rgba(68, 102, 140, 0.10);
+}
+
+.headerNavLink,
+.headerMobileNavSolutionsHeading,
+.solutionsLink {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--dark-v2);
+  transition: all var(--btn-hover-transition);
+
+  @include onMediumDesktop {
+    color: var(--white);
+  }
+}
+
+.solutionsLink {
+  color: var(--dark-v2);
+  transition: all var(--btn-hover-transition);
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+//mobile navigation
+.headerMobileNav {
+  position: fixed;
+  inset: 0;
+  transition: all 300ms;
+
+  .headerMobileNavWrapper,
+  .headerMobileNavList,
+  .headerMobileNavSolutions {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .headerMobileNavWrapper {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    background-color: #fff;
+    padding-top: 10.6rem;
+    padding-inline: 1.6rem;
+    overflow: scroll;
+    box-shadow: 4px 4px 40px 0px rgba(68, 102, 140, 0.10);
+
+    @include onTablet {
+      padding: 4rem 3.2rem;
+      height: auto;
+      border-radius: 0 0 24px 24px;
+    }
+
+    @include onLaptop {
+      height: 100%;
+      max-width: 480px;
+      margin-left: auto;
+      border-radius: 24px 0 0 24px;
+    }
+  }
+
+  .headerMobileNavOverlay {
+    position: absolute;
+    inset: 0;
+  }
+
+  .headerMobileNavSolutionsHeading {
+    opacity: .5;
+  }
+
+  .headerMobileNavDivider {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(214, 233, 255, 0.00) 0%, #BED9F5 50%, rgba(214, 233, 255, 0.00) 100%);
+  }
+}

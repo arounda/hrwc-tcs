@@ -1,0 +1,106 @@
+@import '@/styles/utils/mixins';
+
+.testimonialsWrapper {
+  @include onMediumDesktop {
+    display: flex;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+}
+
+.testimonialsTop {
+  margin-bottom: 4rem;
+
+  @include onMediumDesktop {
+    margin: 0;
+    max-width: 454px;
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.testimonialsMain {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include onMediumDesktop {
+    max-width: 58%;
+  }
+}
+
+.testimonialsSubheading {
+  margin-top: .8rem;
+}
+
+.testimonialsCards {
+  width: 100%;
+  display: grid;
+  gap: 1.6rem;
+
+  @include onTablet {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.testimonialsCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.6rem;
+  border-radius: 24px;
+  background-color: var(--white);
+  box-shadow: 2px 2px 20px 0px rgba(68, 102, 140, 0.07);
+
+  @include onTablet {
+    padding: 2.4rem;
+  }
+
+  svg {
+    margin-top: 2.4rem;
+  }
+}
+
+.testimonialsCardPersonInfo {
+  padding-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.testimonialsCardCreds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  margin-bottom: 1.6rem;
+}
+
+.testimonialsCardName {
+  font-family: var(--font-gilroy);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.testimonialsCardIndustry {
+  font-size: 1.6rem;
+  line-height: 160%;
+  opacity: .5;
+}
+
+.testimonialsNavDesktopWrapper {
+  display: none;
+
+  @include onMediumDesktop {
+    display: block;
+  }
+}
+
+.testimonialsNavMobileWrapper {
+  @include onMediumDesktop {
+    display: none;
+  }
+}

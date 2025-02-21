@@ -1,0 +1,80 @@
+@import '@/styles/utils/mixins';
+
+.connectWrapper {
+  position: relative;
+  width: 100%;
+  padding: 8rem 3.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-radius: 24px;
+  overflow: hidden;
+  background-image: url('../../../../assets/Homepage/connect-bg-mob.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include onTablet {
+    padding-block: 11.4rem;
+    background-image: url('../../../../assets/Homepage/connect-bg-tablet.png');
+  }
+
+  @include onLaptop {
+    padding: 9rem 4rem;
+    flex-direction: row-reverse;
+    background-image: url('../../../../assets/Homepage/connect-bg-laptop.png');
+  }
+
+  @include onLargeDesktop {
+    padding: 14.6rem 8rem;
+    background-image: url('../../../../assets/Homepage/connect-bg-desktop.png');
+  }
+}
+
+.connectBg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, #242BFF 15.02%, #2F0092 109.42%);
+}
+
+.connectMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include onLaptop {
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+#connectHeading {
+  @include onLaptop {
+    text-align: left;
+  }
+}
+
+.connectSubtitle {
+  margin-top: .8rem;
+  margin-bottom: 3.2rem;
+
+  @include onLaptop {
+    text-align: left;
+  }
+}
+
+.connectImageWrapper {
+  display: none;
+
+  @include onLaptop {
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
+  }
+}
+
+.connectImage {
+  width: 100%;
+  height: auto;
+}

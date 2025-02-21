@@ -1,0 +1,20 @@
+@import '@/styles/utils/mixins';
+
+.integrationsHero {
+  padding-top: 12.2rem;
+  padding-bottom: 4rem;
+
+  @include onTablet {
+    padding-top: 14.2rem;
+    padding-bottom: 6rem;
+  }
+
+  @include onLaptop {
+    padding-top: 17.2rem;
+  }
+
+  @include onLargeDesktop {
+    padding-top: 18rem;
+    padding-bottom: 8rem;
+  }
+}
