@@ -10,14 +10,13 @@
   }
 
   @include onMediumDesktop {
-    padding-block: 7.2rem;
+    padding-block: 8.2rem;
   }
 }
 
-.footerMain {
+.footerWrapper {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
+  grid-gap: 6rem;
 
   @include onTablet {
     grid-template-columns: 1fr 1fr;
@@ -25,134 +24,54 @@
 
   @include onLaptop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 0;
+  }
+
+  @include onMediumDesktop {
+    gap: 7.2rem;
   }
 }
 
-.footerLinksBlock,
+.footerLogo {
+  @include onTablet {
+    grid-column: span 2;
+  }
+
+  @include onLaptop {
+    grid-column: 1;
+  }
+}
+
+.footerMainLinks {
+  @include onLaptop {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include onMediumDesktop {
+    & .footerLinkList {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
 .footerLinkList {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 3.2rem;
 }
 
-.isFirst {
-  @include onTablet {
-    order: 1;
-  }
-
-  @include onLaptop {
-    order: 0;
-  }
-}
-
-.isSecond {
-  @include onTablet {
-    order: 4;
-  }
-
-  @include onLaptop {
-    order: 0;
-  }
-}
-
-.isThird {
-  @include onTablet {
-    order: 3;
-  }
-
-  @include onLaptop {
-    order: 0;
-  }
-}
-
-.isFourth {
-  @include onTablet {
-    order: 2;
-  }
-
-  @include onLaptop {
-    order: 0;
-  }
-}
-
-h3.footerLink {
-  opacity: .5;
-}
-
-.footerLink,
-.footerLink path {
+.footerLink {
   font-size: 1.6rem;
   font-weight: 500;
 
   transition: all 250ms;
 }
 
-.footerLink:hover:not(h3),
-.footerLink:hover path {
+.footerLink:hover {
   color: var(--light-blue-v2);
-  stroke: var(--light-blue-v2);
-  stroke: var(--light-blue-v2);
-}
-
-.footerLink.isLogo:hover path {
-  // fill: var(--light-blue-v2);
-  stroke: none;
-}
-
-.footerBottom {
-  display: grid;
-  grid-template-columns: 1fr;
-
-  @include onTablet {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @include onLaptop {
-    margin-top: 6rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: space-between;
-  }
-}
-
-.footerBottom,
-.terms .footerLinkList {
-  gap: 4rem;
-}
-
-.terms {
-  margin-top: 4rem;
-  padding-block: 4rem;
-  border-block: dashed 1px #bdbdbd50;
-
-  @include onTablet {
-    grid-column: span 2;
-  }
-
-  @include onLaptop {
-    border: none;
-    margin: 0;
-    padding: 0;
-    align-self: end;
-    order: 2;
-  }
-}
-
-.terms .footerLinkList {
-  @include onTablet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @include onLaptop {
-    align-items: end;
-  }
-}
-
-.footerLogo {
-  @include onLaptop {
-    align-self: end;
-    order: 1;
-  }
 }
 
 .footerSlogan,
@@ -161,18 +80,10 @@ h3.footerLink {
   line-height: 150%;
 }
 
-.footerCopyright {
-  margin-top: 2.4rem;
-}
-
 .footerSlogan {
   opacity: .5;
 
-  @include onTablet {
-    align-self: end;
-  }
-
   @include onLaptop {
-    order: 3;
+    grid-area: 2 / 4 / 3 / 5;
   }
 }

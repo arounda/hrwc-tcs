@@ -1,5 +1,4 @@
-import { nonSolutionsLinks } from '@/constants/nonSolutionsLinks';
-import { solutionsLinks } from '@/constants/solutionsConst';
+import { navLinks } from '@/constants/navLinks';
 import Link from 'next/link';
 import styled from 'styled-components';
 import s from './headerNavigation.module.scss';
@@ -22,52 +21,7 @@ const HeaderNavigation = ({
   return (
     <nav className={s.headerNav}>
       <ul className={s.headerDesktopNav}>
-        <li className={s.headerNavListItem}>
-          <div className={`${s.headerNavLink} ${s.withChevron}`}>
-            <StyledSpan
-              $isHeaderWhite={isHeaderWhite}
-              $isHome={isHome}
-            >
-              Solutions
-            </StyledSpan>
-
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3.00006 6L6.7046 9.67453C7.1421 10.1085 7.85801 10.1085 8.29551 9.67453L12.0001 6"
-                stroke={isHeaderWhite || !isHome ? 'var(--dark-v2)' : "white"}
-                strokeWidth="1.5"
-                strokeMiterlimit="10"
-                strokeLinecap="round" strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-
-          <div className={s.solutionsDropdown}>
-            <ul className={s.solutionsDropdownList}>
-              {solutionsLinks.map(item => (
-                <li
-                  key={item.id}
-                  className={s.solutionsDropdownListItem}
-                >
-                  <Link
-                    href={item.url}
-                    className={s.solutionsLink}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </li>
-
-        {nonSolutionsLinks.map(item => (
+        {navLinks.map(item => (
           <li
             key={item.id}
             className={s.headerNavListItem}
@@ -94,33 +48,8 @@ const HeaderNavigation = ({
         }}
       >
         <div className={s.headerMobileNavWrapper}>
-          <div className={s.headerMobileNavSolutions}>
-            <span className={s.headerMobileNavSolutionsHeading}>
-              Solutions
-            </span>
-
-            <ul className={s.headerMobileNavList}>
-              {solutionsLinks.map((item) => (
-                <li
-                  key={item.id}
-                  className={s.headerNavListItem}
-                >
-                  <Link
-                    href={item.url}
-                    className={s.headerNavLink}
-                    onClick={() => onMenuOpen(false)}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={s.headerMobileNavDivider}></div>
-
           <ul className={s.headerMobileNavList}>
-            {nonSolutionsLinks.map(item => (
+            {navLinks.map(item => (
               <li
                 className={s.headerNavListItem}
                 key={item.id}

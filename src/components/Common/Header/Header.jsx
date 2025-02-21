@@ -87,7 +87,7 @@ const Header = () => {
               />
 
               <ButtonPrimary
-                text='New Hire Login'
+                text='Schedule Demo'
                 link={newHireLoginUrl}
                 isHeaderWhite={isHeaderWhite}
                 isHome={isHeroWhite}

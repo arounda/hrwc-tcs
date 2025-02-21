@@ -1,6 +1,7 @@
 @import '@/styles/utils/mixins';
 
 .contact {
+  background: var(--primary-dark-blue);
   background-image: url('../../../assets/Homepage/contact-bg-mob.png');
   background-repeat: no-repeat;
   background-position: center;
