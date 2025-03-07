@@ -1,8 +1,8 @@
 import { createTheme, ThemeProvider } from '@mui/material';
 import s from './form.module.scss';
-import PartnerForm from './PartnerForm/PartnerForm';
-import SalesForm from './SalesForm/SalesForm';
-import SupportForm from './SupportForm/SupportForm';
+import PartnerForm from './PartnerForm';
+import SalesForm from './SalesForm';
+import SupportForm from './SupportForm';
 
 const customTheme = createTheme({
   typography: {
