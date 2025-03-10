@@ -239,6 +239,10 @@ main {
   margin-bottom: .8rem;
 }
 
+.mb-24 {
+  margin-bottom: 2.4rem;
+}
+
 .mb-32 {
   margin-bottom: 3.2rem;
 }
@@ -285,17 +289,4 @@ main {
 
 .heroCardIconWrapper path {
   stroke: white;
-}
-
-// Team page slider pagination
-.teamPagination {
-  display: flex;
-  gap: 12px;
-
-  & .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    margin: 0 !important;
-    background-color: var(--primary);
-  }
 }

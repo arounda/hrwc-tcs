@@ -1,0 +1,52 @@
+@import '@/styles/utils/mixins';
+
+.missionWrapper,
+.missionInfo,
+.missionCard,
+.missionCardTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.missionWrapper {
+  gap: 4rem;
+
+  @include onLargeDesktop {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    gap: 8rem;
+  }
+}
+
+.missionInfo {
+  gap: 2.4rem;
+}
+
+.missionCards {
+  display: grid;
+  gap: 1.6rem;
+
+  @include onTablet {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.missionCard {
+  gap: 3.2rem;
+  padding: 2.4rem;
+  border-radius: 24px;
+  box-shadow: 2px 2px 20px 0px rgba(68, 102, 140, 0.07);
+}
+
+.missionCardTop {
+  gap: 2.4rem;
+
+  h3 {
+    font-size: 1.8rem;
+    line-height: 160%;
+  }
+
+  & span {
+    font-weight: 500;
+  }
+}

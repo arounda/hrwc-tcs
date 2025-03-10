@@ -1,7 +1,7 @@
 import Contact from '@/components/Common/Contact';
-import Mission from '@/components/Common/Mission';
 import Connect from '@/components/Pages/Homepage/Connect';
 import Hero from '@/components/Pages/Homepage/Hero';
+import Mission from '@/components/Pages/Homepage/Mission';
 import TrustedPartner from '@/components/Pages/Homepage/TrustedPartner';
 import HeaderFooterView from '@/components/Views/HeaderFooterView';
 
