@@ -1,0 +1,41 @@
+@import '@/styles/utils/mixins';
+
+.hiwWrapper {
+  display: grid;
+  gap: 4rem;
+
+  @include onLargeDesktop {
+    grid-template-columns: 380px 1fr;
+    gap: 6rem;
+  }
+}
+
+.hiwCards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @include onTablet {
+    flex-direction: row;
+  }
+}
+
+.hiwCard {
+  @include onTablet {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+}
+
+
+.cardsSeparator {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(214, 233, 255, 0.00) 0%, #C3D6E8 50%, rgba(214, 233, 255, 0.00) 100%);
+
+
+  @include onTablet {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(214, 233, 255, 0.00) 0%, #C3D6E8 50%, rgba(214, 233, 255, 0.00) 100%);
+  }
+}

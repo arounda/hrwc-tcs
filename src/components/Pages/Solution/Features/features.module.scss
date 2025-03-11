@@ -1,50 +1,12 @@
 @import '@/styles/utils/mixins';
 
-.whitelabelMain {
-  margin-bottom: 6rem;
-
-  @include onTablet {
-    margin-bottom: 8rem;
-  }
-
-  @include onLaptop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-  }
-
-  @include onMediumDesktop {
-    gap: 6rem;
-  }
-
-  @include onLargeDesktop {
-    margin-bottom: 10rem;
-  }
-}
-
-.whitelabelInfo {
-  max-width: 586px;
-}
-
-.whitelabelImageWrapper {
-  margin-top: 4rem;
-
-  @include onLaptop {
-    margin: 0;
-  }
-}
-
-.whitelabelImage {
-  width: 100%;
-  height: auto;
-}
-
-.whitelabelCards {
+.featuresCards {
+  margin-top: 3.2rem;
   position: relative;
   display: grid;
-  gap: 1.2rem;
+  gap: 2.4rem;
 
-  @include onLaptop {
+  @include onTablet {
     grid-template-columns: 1fr 1fr;
     gap: 4.8rem;
   }
@@ -60,7 +22,7 @@
   opacity: 0.8;
   background: linear-gradient(90deg, rgba(214, 233, 255, 0.00) 0%, #C3D6E8 50%, rgba(214, 233, 255, 0.00) 100%);
 
-  @include onLaptop {
+  @include onTablet {
     display: block;
   }
 }
@@ -77,7 +39,7 @@
   height: 1px;
   background: linear-gradient(90deg, rgba(214, 233, 255, 0.00) 0%, #C3D6E8 50%, rgba(214, 233, 255, 0.00) 100%);
 
-  @include onLaptop {
+  @include onTablet {
     display: none;
   }
 }
