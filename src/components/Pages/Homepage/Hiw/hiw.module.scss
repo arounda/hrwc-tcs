@@ -1,0 +1,56 @@
+@import '@/styles/utils/mixins';
+
+.hiwWrapper {
+  display: grid;
+  gap: 6rem;
+
+  @include onMediumDesktop {
+    grid-template-columns: 540px 1fr;
+    gap: 8rem;
+  }
+}
+
+.hiwMain,
+.hiwCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.hiwWrapper img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  max-width: 570px;
+}
+
+.hiwMain {
+  gap: 3.2rem;
+}
+
+.hiwTop {
+  @include onMediumDesktop {
+    & h2,
+    & p {
+      text-align: left;
+    }
+  }
+}
+
+.hiwCards {
+  display: grid;
+  gap: 2.4rem;
+
+  @include onTablet {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+  }
+
+  @include onMediumDesktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hiwCard {
+  gap: 0.4rem;
+}
