@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import s from './header.module.scss';
-import { clientLoginUrl, newHireLoginUrl } from '@/constants/mainURLs';
+import { clientLoginUrl, scheduleDemo } from '@/constants/mainURLs';
 import { usePathname } from 'next/navigation';
 import ButtonPrimary from '../ButtonPrimary';
 import ButtonSecondary from '../ButtonSecondary';
@@ -88,7 +88,7 @@ const Header = () => {
 
               <ButtonPrimary
                 text='Schedule Demo'
-                link={newHireLoginUrl}
+                link={scheduleDemo}
                 isHeaderWhite={isHeaderWhite}
                 isHome={isHeroWhite}
                 isHeader={true}
