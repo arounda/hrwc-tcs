@@ -1,0 +1,56 @@
+@import '@/styles/utils/mixins';
+
+.targetWrapper {
+  max-width: 800px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.targetTable {
+  display: grid;
+  gap: 2.4rem;
+
+  @include onTablet {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6.4rem;
+    row-gap: 4.8rem;
+    background-image: url('../../../../assets/wotc-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.targetTableItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+
+  & p {
+    max-width: 216px;
+  }
+
+  & span {
+    padding: .6rem .8rem;
+    border-radius: 36px;
+    background: #FAFAFA;
+    color: var(--primary);
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
+
+.tableItemsDivider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(214, 233, 255, 0.00) 0%, #BED9F5 50%, rgba(214, 233, 255, 0.00) 100%);
+
+  &:last-of-type {
+    display: none;
+  }
+
+  @include onTablet {
+    display: none;
+  }
+}

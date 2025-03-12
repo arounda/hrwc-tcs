@@ -1,1 +1,96 @@
 @import '@/styles/utils/mixins';
+
+.heroWrapper,
+.heroCalculatorWrapper,
+.heroResult,
+.calculatorForm,
+.formFields,
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroWrapper {
+  gap: 3.2rem;
+}
+
+.heroTop {
+  margin-inline: auto;
+  max-width: 800px;
+}
+
+.heroCalculatorWrapper {
+  gap: 2.4rem;
+  padding: 1.6rem;
+  border-radius: 24px;
+  box-shadow: 2px 2px 20px 0px rgba(68, 102, 140, 0.07);
+
+  @include onTablet {
+    padding: 2.4rem;
+  }
+
+  @include onLaptop {
+    padding: 4rem;
+  }
+}
+
+.calculatorForm {
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+
+.formFields {
+  width: 100%;
+  gap: 1.6rem;
+}
+
+.formField {
+  gap: 0.8rem;
+
+  & input {
+    border: none;
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: 12px;
+    background: #FAFAFB;
+    font-size: 1.6rem;
+  }
+}
+
+.heroCalculatorWrapper>p:first-of-type {
+  opacity: .5;
+}
+
+.heroResult {
+  padding-block: 3rem;
+  align-items: center;
+  font-family: var(--font-gilroy);
+
+  & p:nth-child(1) {
+    font-size: 4.8rem;
+    font-weight: 600;
+    line-height: 120%;
+    background: linear-gradient(105deg, #242BFF 15.02%, #1B0092 109.42%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include onTablet {
+      font-size: 5.2rem;
+    }
+
+    @include onLaptop {
+      font-size: 5.4rem;
+    }
+
+    @include onLargeDesktop {
+      font-size: 6.6rem;
+    }
+  }
+
+  & p:nth-child(2) {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 150%;
+  }
+}
