@@ -12,6 +12,8 @@ import HeaderNavigation from './HeaderNavigation';
 
 const whiteHeroPages = [
   '/solution',
+  '/wotc-calculator',
+  '/integrations',
   '/contact-us',
   '/policies/privacy-policy',
   '/policies/terms',

@@ -18,3 +18,28 @@
     padding-bottom: 8rem;
   }
 }
+
+.heroCards {
+  display: grid;
+  gap: 1.6rem;
+
+  @include onLaptop {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.heroCard {
+  padding: 1.6rem;
+  border-radius: 24px;
+  background: var(--primary-dark-blue);
+
+  @include onTablet {
+    padding: 2.4rem;
+  }
+}
+
+.heroCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

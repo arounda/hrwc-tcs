@@ -1,17 +1,5 @@
 @import '@/styles/utils/mixins';
 
-.hero {
-  padding-top: 14.2rem;
-
-  @include onTablet {
-    padding-top: 16.2rem;
-  }
-
-  @include onLargeDesktop {
-    padding-top: 18rem;
-  }
-}
-
 .heroCards {
   display: grid;
   gap: 1.6rem;
@@ -32,8 +20,6 @@
   padding: 1.6em;
   border-radius: 24px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%);
-
-
 }
 
 .heroCardIconWrapper {

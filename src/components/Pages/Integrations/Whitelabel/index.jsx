@@ -9,7 +9,7 @@ const Whitelabel = () => {
         <div className={s.whitelabelMain}>
           <div className={s.whitelabelInfo}>
             <h2 className='heading-h2 mb-8'>
-              HRWC White-Label Option
+              White-Label Option
             </h2>
 
             <p className='text'>
@@ -22,6 +22,7 @@ const Whitelabel = () => {
               className={s.whitelabelImage}
               src={whitelabelImg}
               alt=''
+              priority
             />
           </div>
         </div>
