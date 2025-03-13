@@ -1,15 +1,11 @@
 'use client';
 
 import ButtonPrimary from '@/components/Common/ButtonPrimary';
-import { InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import { Box, InputLabel, MenuItem, Select } from '@mui/material';
 import { useState } from 'react';
 import s from './hero.module.scss';
 
 const industriesOptions = [
-  {
-    id: 'i0',
-    title: 'Industry'
-  },
   {
     id: 'i1',
     title: 'industry1'
@@ -50,8 +46,6 @@ const Hero = () => {
     const name = e.target.name;
     const value = e.target.value;
 
-    console.log(name, value);
-
     return setFormState(prev => {
       return {
         ...prev,
@@ -81,42 +75,66 @@ const Hero = () => {
               onSubmit={handleFormSubmit}
             >
               <div className={s.formFields}>
-                <InputLabel
-                  id="industry"
+                <Box
                   sx={{
-                    fontFamily: 'var(--font-gilroy)',
-                    fontSize: '1.8rem',
-                    fontWeight: 600,
-                    color: 'black',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '.8rem',
                   }}
                 >
-                  Select Industry
-                </InputLabel>
-                <Select
-                  labelId="industry"
-                  required
-                  name='industry'
-                  value={formState.industry}
+                  <InputLabel
+                    id="industry"
+                    sx={{
+                      fontFamily: 'var(--font-gilroy)',
+                      fontSize: '1.8rem',
+                      fontWeight: 600,
+                      color: 'black',
+                    }}
+                  >
+                    Select Industry
+                  </InputLabel>
 
-                  onChange={handleInputChange}
-                  MenuProps={{
-                    marginThreshold: null,
-                    style: {
-                      marginTop: '-10px',
-                      overflow: 'scroll',
-                      maxHeight: 'auto',
-                    }
-                  }}
-                >
-                  {industriesOptions.map((item) => (
+                  <Select
+                    labelId="industry"
+                    required
+                    name='industry'
+                    value={formState.industry}
+                    displayEmpty
+                    onChange={handleInputChange}
+                    MenuProps={{
+                      marginThreshold: null,
+                      style: {
+                        marginTop: '-10px',
+                        overflow: 'scroll',
+                        maxHeight: 'auto',
+                      }
+                    }}
+                  >
                     <MenuItem
-                      key={item.id}
-                      value={item.title}
+                      disabled
+                      value=''
                     >
-                      {item.title}
+                      <Box
+                        sx={{
+                          opacity: .5,
+                        }}
+                      >
+                        Industry
+                      </Box>
                     </MenuItem>
-                  ))}
-                </Select>
+                    {industriesOptions.map((item) => (
+                      <MenuItem
+                        key={item.id}
+                        value={item.title}
+                        sx={{
+                          fontSize: '1.6rem',
+                        }}
+                      >
+                        {item.title}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </Box>
 
                 <label className={s.formField}>
                   <span className="text is-l is-bold">
@@ -157,8 +175,8 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   )
 }
 

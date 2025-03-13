@@ -37,11 +37,22 @@
 .calculatorForm {
   align-items: flex-start;
   gap: 2.4rem;
+
+  @include onLaptop {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    align-items: end;
+  }
 }
 
 .formFields {
   width: 100%;
   gap: 1.6rem;
+
+  @include onLaptop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .formField {
@@ -49,6 +60,7 @@
 
   & input {
     border: none;
+    min-height: 55px;
     width: 100%;
     padding: 1.6rem;
     border-radius: 12px;
