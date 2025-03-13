@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
 
           <p className={s.footerCopyright}>
-            © 2025 TAXCREDITSERVICES
+            © 2025 TAX CREDIT SERVICES
           </p>
 
           <p className={s.footerSlogan}>
